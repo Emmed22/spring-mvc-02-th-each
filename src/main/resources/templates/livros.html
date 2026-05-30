@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Lista de Livros</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <h1> Lista de Livros</h1>
+    <ul>
+        <li th:each="livro, status: ${livros}" th:text="|Livro ${status.count} : ${livro}|"
+            th:style="${status.first ? 'font-weight:bold' : ''}"></li>
+    </ul>
+</body>
+
+</html>
